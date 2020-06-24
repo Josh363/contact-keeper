@@ -5,6 +5,12 @@ export const ContactFilter = () => {
   const contactContext = useContext(ContactContext)
   const text = useRef('')
 
+  useEffect(() => {
+    if (filtered === null) {
+      text.current.value = ''
+    }
+  })
+
   const { filterContacts, clearFilter, filtered } = contactContext
 
   const onChange = (e) => {
