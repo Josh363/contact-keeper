@@ -4,13 +4,13 @@ const path = require('path')
 
 const app = express()
 
-//Connect Database
+// Connect Database
 connectDB()
 
-//Init Middleware
+// Init Middleware
 app.use(express.json({ extended: false }))
 
-//Define Routes
+// Define Routes
 app.use('/api/users', require('./routes/users'))
 app.use('/api/auth', require('./routes/auth'))
 app.use('/api/contacts', require('./routes/contacts'))
